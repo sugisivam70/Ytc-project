@@ -1328,57 +1328,7 @@ body, p, .about-text p, .machine-text, .footer-note, .footer-last, .footer-3 {
     min-width: 0;
   }
 }
-
-.work-stats {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 60px;
-  margin: 48px 0 24px 0;
-  flex-wrap: wrap;
-}
-
-.work-stat {
-  text-align: center;
-  min-width: 140px;
-}
-
-.work-stat-number {
-  display: inline-block;
-  font-family: 'Titillium Web', Arial, sans-serif;
-  font-size: 3.2rem;
-  font-weight: 700;
-  color: #41729f;
-  margin-bottom: 8px;
-  transition: color 0.2s;
-}
-.work-plus{
-display: inline-block;  
-color: #102542;
-
-}
-.work-stat-number.underline {
-  border-bottom: 4px solid #000000;
-  padding-bottom: 2px;
-}
-
-.work-stat-label {
-  font-family: 'Roboto', Arial, sans-serif;
-  color: #1e1a16;
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-top: 8px;
-  letter-spacing: 0.01em;
-
-}
-
-@media (max-width: 700px) {
-  .work-stats {
-    flex-direction: column;
-    gap: 28px;
-    align-items: center;
-  }
-}
+/* work stats */
 
 /* Careers Section */
 .careers-section {
@@ -1903,6 +1853,16 @@ color: #102542;
 }
 
 /* Contact Container */
+.contact-section {
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(120deg, #e1f1ff 60%, #f6fafd 100%);
+}
+
+/* Contact Container */
 .contact-container {
   margin: 0 auto;
   padding: 48px 0 0 0;
@@ -1916,34 +1876,34 @@ color: #102542;
 
 /* Contact Image Placeholder */
 .contact-img-placeholder {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
   background: linear-gradient(120deg, #f8fbff 60%, #ffffff 100%);
   border-radius: 18px;
   box-shadow: 0 4px 32px rgba(65,114,159,0.10);
   padding: 32px 28px 24px 28px;
   margin-bottom: 32px;
   width: 1000px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   position: relative;
 }
 
-/* Contact Subtitle (inside img placeholder) */
 /* Contact Info Block Styles */
 .ytc-contact-info {
- 
-  color: #000000;
+  background: #222;
+  color: #fff;
   border-radius: 14px;
   padding: 28px 22px 18px 22px;
-  margin: 0px 0 0 0;
-  max-width: 2400px;
+  margin: 0;
+  box-shadow: 0 2px 18px rgba(65,114,159,0.10);
+  max-width: 420px;
   width: 100%;
-  justify-content: left;
-  
 }
 
 .ytc-contact-title {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 18px;
   letter-spacing: 1px;
@@ -1962,7 +1922,7 @@ color: #102542;
 
 .ytc-contact-icon {
   color: #f87060;
-  font-size: 1.0rem;
+  font-size: 1.3rem;
   margin-top: 2px;
   min-width: 22px;
   text-align: center;
@@ -1971,7 +1931,7 @@ color: #102542;
 .ytc-contact-company {
   font-weight: 700;
   font-size: 1.08rem;
-  color: #000000;
+  color: #fff;
 }
 
 .ytc-contact-link {
@@ -1985,15 +1945,25 @@ color: #102542;
   text-decoration: underline;
 }
 
-@media (max-width: 700px) {
-  .ytc-contact-info {
-    max-width: 98vw;
-    padding: 18px 6px 12px 10px;
-    font-size: 0.98rem;
-  }
-  .ytc-contact-title {
-    font-size: 1.08rem;
-  }
+/* Google Map Styles */
+.ytc-map-wrap {
+  flex: 1 1 340px;
+  max-width: 420px;
+  min-width: 260px;
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 18px rgba(65,114,159,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ytc-google-map {
+  width: 100%;
+  height: 260px;
+  border: 0;
+  display: block;
 }
 
 .contact-cta {
