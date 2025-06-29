@@ -1,0 +1,169 @@
+<!-- Example: turning.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turning Products - YTC</title>
+  <link rel="stylesheet" href="YTC.css" />
+</head>
+<body>
+  <a href="YTC.html" class="back-link">&larr; Back</a>
+  <h2 class="turning-title">Turnmil Products</h2>
+  <div class="product-grid">
+    <!-- Your turning product cards here -->
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill 1.JPG" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-2.JPG" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-3.JPG" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-4.JPG" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-5.JPG" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-6.JPG" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-7.JPG" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-8.JPG" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-9.JPG" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-10.JPG" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-11.JPG" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-12.JPG" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-14.jpg" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-15.jpg" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-16.jpg" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-18.jpg" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/main.html/img/product/turnmill/turnmill-19.jpg" alt="Turning Product 1" class="product-img">
+      <div class="product-info">
+        <h3>CNC precision Parts</h3>
+      </div>
+    </div>
+   
+
+    <!-- Add more cards as needed -->
+  </div>
+
+  <div id="product-modal" class="product-modal">
+  <span class="product-modal-close modal-close-btn">&times;</span>
+  <img class="product-modal-img" src="" alt="Product Preview">
+ </div>
+
+<script>
+
+  document.querySelectorAll('.product-tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    // Remove active from all tabs and contents
+    document.querySelectorAll('.product-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.product-tab-content').forEach(c => c.classList.remove('active'));
+    // Add active to clicked tab and its content
+    tab.classList.add('active');
+    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+  });
+});
+
+// Product image modal
+document.querySelectorAll('.product-img').forEach(img => {
+  img.addEventListener('click', function() {
+    document.querySelector('.product-modal-img').src = img.src;
+    document.getElementById('product-modal').classList.add('active');
+  });
+});
+
+// Close modal when clicking the close icon
+document.querySelector('.product-modal-close').onclick = function(e) {
+  document.getElementById('product-modal').classList.remove('active');
+  document.querySelector('.product-modal-img').src = "";
+  e.stopPropagation();
+};
+
+// Close modal when clicking outside the image
+document.getElementById('product-modal').onclick = function(e) {
+  if (e.target === this) {
+    this.classList.remove('active');
+    document.querySelector('.product-modal-img').src = "";
+  }
+};
+
+// Prevent modal from closing when clicking the image itself
+document.querySelector('.product-modal-img').onclick = function(e) {
+  e.stopPropagation();
+};
+</script>
+</body>
+</html>
