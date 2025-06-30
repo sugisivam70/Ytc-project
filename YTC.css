@@ -358,7 +358,7 @@ body, p, .about-text p, .machine-text, .footer-note, .footer-last, .footer-3 {
   letter-spacing: 1px;
 }
 .hero-gradient-text {
-  background: linear-gradient(90deg, #51b042 30%, #474545 100%);
+  background: linear-gradient(90deg, #f87060 30%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -531,7 +531,7 @@ body, p, .about-text p, .machine-text, .footer-note, .footer-last, .footer-3 {
 }
 .section-title {
   font-family: 'Titillium Web', Arial, sans-serif;
-  color: #2ecb53;
+  color: #f87060;
   font-size: 2.2rem;
   font-weight: 700;
   text-align: center;
